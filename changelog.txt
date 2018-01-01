@@ -1,0 +1,47 @@
+Fixed warps
+Added more stars 
+Removed 100 coin stars
+
+Minor text changes
+
+C1:
+	No more fog
+	Speedrunners hate him
+
+C3:
+	Fading warp is now visible
+	Added new area instead of ride
+	Added textbox after switch [66]
+
+C4:
+	Music changed
+	Box jumps nerfed
+
+C5:
+->	Added new area instead of carpet ride
+
+C6:
+	Music changed (sowwy, it caused sound glitch :[)
+
+C7:
+	Added arrow to show direction at start
+	
+C8:
+	No more fog
+	Added arrow to show direction for owl
+	Music changed (holy shit, it was loud)
+
+C9:
+	No more fog
+	
+BC1:
+	Removed unfair firespitter
+
+After BC1:
+	Added block to stand on near warp
+	
+BC2:
+	King Bobomb needs 3 hits
+	
+After C2:
+->	Completely reimported

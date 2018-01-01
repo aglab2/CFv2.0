@@ -1,0 +1,119 @@
+bank E: 01790000 - 018E0000
+1F start geo layout: 19001700
+
+805F3058 - collision for boxes -> 7D3058
+
+7D3100 - start of descr
+
+
+
+00 96    00 96    00 96 
+FF 76    FF 76    00 96 
+00 96    FF 76    00 96 
+FF 76    00 96    00 96 
+00 96    00 96    00 96 
+FF 76    00 96    00 96 
+00 96    00 96    FF 76 
+FF 76    00 96    FF 76 
+00 96    00 96    FF 76 
+FF 76    00 96    FF 76 
+00 96    FF 76    FF 76 
+FF 76    FF 76    FF 76 
+00 96    FF 76    FF 76 
+FF 76    FF 76    FF 76 
+FF 76    FF 76    00 96 
+00 96    FF 76    00 96 
+00 96    FF 76    00 96 
+00 96    FF 76    FF 76 
+00 96    00 96    FF 76 
+00 96    00 96    00 96 
+FF 76    FF 76    00 96 
+FF 76    00 96    00 96 
+FF 76    00 96    FF 76 
+FF 76    FF 76    FF 76 
+FF 76    FF 76    FF 76 
+80 00    FF 76    FF 76
+80 00    FF 76    FF 76
+FF 76    FF 76    FF 76
+
+
+Vanishing platforms:
+start 65830
+658EC - 65940
+
+--------------------------------------------------------------------------
+
+Switch things
+805F9FE0
+
+
+->	30F5660C-30E80000=0xD660C
+
+0xAD4A70 - model IDs to protect
+8A, 8B - ?
+MOP1: 7B, 99, 98, 97, 92, 9B, 9D
+MOP2: F0, F2, F1, CF
+MOP3: 30, 2F, 2A, 2B, 2C, 2D, 2E,   27, 28
+
+Vuln: 7B, 2F, 2C, 2D, 2E, 27
+03 00 00 00 - replacer
+
+
+2X object are defined in: 49E100 - 49E11F
+7B: 4EB5FC
+
+Maybe we should not touch there, too fucked
+27: 395ED4, 3CFC44, 4AF788
+
+object loading things: FBEE4 & FBF94
+
+------------------------------------------------------------------------------
+
+C924 - quicksand behaviour - no
+
+8033B170 - ptr to current coll?
+
+2518D4
+from 21 to 28 -> SW 0x0007000 ->  80193FA0
+
+286A34 //?
+28EC70 //=0xB
+28C43C //<=0xD3; 0xFD
+
+254338
+253D58
+2507FC - lava + death floor
+2503F0
+
+8033B1D8
+who reads floor triangle:
+	253AD8
+	253B70
+	2518C0
+	
+80337768
+
+80255488 - switch for collision
+
+80336678 - collision jump table for 21+? (F1678)
+
+80255620 - normal ground function
+802555F4 - quicksand function
+
+---------------------------------------------------------------------------
+
+AB1 -> C6
+C3 -> C6
+C4 -> C8
+C5 -> C7
+B2 -> C9
+
+Warps route:
+Course 1
+	collect last
+Course 2
+	collect last
+Course 3
+	grab MC + MC star
+	goto end, NO STAR
+Course 4

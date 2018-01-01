@@ -1,0 +1,22 @@
+#
+## Alias OBJ Material File
+# Exported from SketchUp, (c) 2000-2012 Trimble Navigation Limited
+
+newmtl _2
+Ka 0.000000 0.000000 0.000000
+Kd 0.537255 0.549020 0.168627
+Ks 0.330000 0.330000 0.330000
+map_Kd ice_thing/_2.png
+
+newmtl _3
+Ka 0.000000 0.000000 0.000000
+Kd 0.400000 0.407843 0.164706
+Ks 0.330000 0.330000 0.330000
+map_Kd ice_thing/_3.png
+
+newmtl _4
+Ka 0.000000 0.000000 0.000000
+Kd 0.462745 0.466667 0.227451
+Ks 0.330000 0.330000 0.330000
+map_Kd ice_thing/_4.bmp
+

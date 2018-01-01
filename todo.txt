@@ -1,0 +1,8 @@
+fix bad death warps
+
+textbox for door warps
+
+031B0000 - 03300000
+0E004E90
+
+31C0000 - можно импортить
