@@ -1,4 +1,4 @@
-;overwrite klepto behav with gp bonk
+;door that spawn to warp ID 0x20+(max ID of stars collected in level)
 
 ;use behav 5310, model 38(regular door) in tt64
 ;bparam1 byte to check stars in (12 for c1, 12+X for c1+X)
