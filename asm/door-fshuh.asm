@@ -46,17 +46,42 @@ warp_fileselectend:
 	ADDU T8, T8, T7
 ;EEPROM offset loader fini
 
+	LUI T6, 0x8033
+	LB T6, 0x1620(T6)
+	SUBIU T6, T6, 1
+	ANDI T3, T6, 0x1 ;1=normal mode, 	0=no warpzones
+	ANDI T4, T6, 0x2 ;1=furthest warp,	0=nearest warp
+	
+	
 ;Make door go to warp 20 - init it is
 	ADDIU T7, R0, 0x20
-	
 	LB T9, 0x0(T8)
-	ANDI T9, T9, 0x7F
-warp_repeat:
-	BEQ T9, R0, warp_fini
+
+;Remove cannon and star 7 if no warpzones
+	ANDI T2, T9, 0x40
+	BNE T3, R0, warp_repeat
+	ANDI T9, T9, 0x3F
+	
+;If Star 7 is set - warp to 0x28
+	BEQ T2, R0, warp_repeat
 	NOP
+	
+	B warp_fini
+	ADDIU T7, R0, 0x27
+	
+warp_repeat:
+;Use T9 as check for 0 for furthest, T9 & 0x01 for nearest
+	BEQ T4, R0, warp_nonearest
+	ADD T2, T9, R0
+	ANDI T2, T9, 0x1
+warp_nonearest:
+	BEQ T2, R0, warp_fini
+	NOP
+	
 	ADDIU T7, T7, 1
 	SRL T9, T9, 1
-	BNE T9, R0, warp_repeat
+	
+	B warp_repeat
 	NOP	
 
 warp_fini:
